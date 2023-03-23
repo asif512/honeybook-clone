@@ -1,0 +1,32 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+.container {
+  max-width: 1140px;
+  // padding: 0 4rem;
+  margin: 0 auto;
+}
+
+@include forDesktop() {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+@include forLarge() {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@include forMedium() {
+  .container {
+    padding: 0 1.2rem;
+  }
+}
+
+@include forSmall() {
+  .container {
+    padding: 0 .8rem;
+  }
+}

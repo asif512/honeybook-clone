@@ -1,0 +1,22 @@
+@mixin forSmall {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+@mixin forMedium {
+  @media (max-width: 776px) {
+    @content;
+  }
+}
+
+@mixin forLarge {
+  @media (max-width: 996px) {
+    @content;
+  }
+}
+
+@mixin forDesktop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
