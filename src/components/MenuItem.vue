@@ -46,6 +46,7 @@ export default {
   a {
     text-decoration: none;
     color: $dark-1;
+    opacity: 0.8;
   }
 
   .hero-menu-wrapper {

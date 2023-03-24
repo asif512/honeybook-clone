@@ -1,147 +1,80 @@
 // ProximaNova Font Family
-
 @font-face {
-  font-family: 'Proxima Nova Alt Bl';
-  src: local('Proxima Nova Alt Black'), local('ProximaNovaA-Black'),
-      url(/src/fonts/Proxima/ProximaNovaA-Black.ttf) format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Proxima Nova Alt Th';
-  src: local('Proxima Nova Alt Extrabold'), local('ProximaNovaA-Extrabld'),
-      url(/src/fonts/Proxima/ProximaNovaA-Extrabld.ttf) format('truetype');
-  font-weight: 800;
-  font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'Proxima Nova Alt Rg';
-  src: local('Proxima Nova Alt Regular'), local('ProximaNovaA-Regular'),
-      url(/src/fonts/Proxima/ProximaNovaA-Regular.ttf) format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Proxima Nova Alt Th';
-  src: local('Proxima Nova Alt Thin'), local('ProximaNovaA-Thin'),
-      url(/src/fonts/Proxima/ProximaNovaA-Thin.ttf) format('truetype');
+  font-family: "ProximaNova";
+  src: url(/src/fonts/Proxima/Proxima-Thin.otf) format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Proxima Nova Alt Lt';
-  src: local('Proxima Nova Alt Semibold'), local('ProximaNovaA-Semibold'),
-      url(/src/fonts/Proxima/ProximaNovaA-Semibold.ttf) format('truetype');
+  font-family: "ProximaNova";
+  src: url(/src/fonts/Proxima/Proxima-Regular.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/src/fonts/Proxima/Proxima-Bold.otf) format("opentype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Proxima Nova Alt Rg';
-  src: local('Proxima Nova Alt Bold'), local('ProximaNovaA-Bold'),
-      url(/src/fonts/Proxima/ProximaNovaA-Bold.ttf) format('truetype');
-  font-weight: bold;
+  font-family: "ProximaNova";
+  src: url(/src/fonts/Proxima/Proxima-Extrabold.otf) format("opentype");
+  font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Proxima Nova Alt Lt';
-  src: local('Proxima Nova Alt Light'), local('ProximaNovaA-Light'),
-      url(/src/fonts/Proxima/ProximaNovaA-Light.ttf) format('truetype');
+  font-family: "ProximaNova";
+  src: url(/src/fonts/Proxima/Proxima-Black.otf) format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+// Aeonik Font Family
+
+@font-face {
+  font-family: "Aeonik";
+  src: url(/src/fonts/Aeonik/Aeonik-Black.otf) format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url(/src/fonts/Aeonik/Aeonik-Bold.otf) format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url(/src/fonts/Aeonik/Aeonik-Light.otf) format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 
-
-
-
-
-// @font-face {
-  // font-family: "ProximaNova";
-  // src: url(/src/fonts/Proxima/Proxima-Thin.otf) format("truetype"), 
-  //   url(/src/fonts/Proxima/Proxima-Regular.otf) format("truetype"),
-  //   url(/src/fonts/Proxima/Proxima-Bold.otf) format("truetype"),
-  //   url(/src/fonts/Proxima/Proxima-Extrabold.otf) format("truetype"),
-  //   url(/src/fonts/Proxima/Proxima-Black.otf) format("truetype"),
-  //   url(/src/fonts/Proxima/Proxima-Alt-Thin.otf) format("truetype"),
-  //   url(/src/fonts/Proxima/Proxima-Alt-Light.otf) format("truetype"),
-  //  url(/src/fonts/Proxima/Proxima-Alt-Bold.otf) format("truetype");
-// }
-
-// @font-face {
-//   font-family: "ProximaNova";
-//   src: url(/src/fonts/Proxima/Proxima-Regular.otf) format("truetype");
-// }
-
-// @font-face {
-//   font-family: "ProximaNova";
-//   src: url(/src/fonts/Proxima/Proxima-Bold.otf) format("truetype");
-// }
-
-// @font-face {
-//   font-family: "ProximaNova";
-//   src: url(/src/fonts/Proxima/Proxima-Extrabold.otf) format("truetype");
-// }
-
-// @font-face {
-//   font-family: "ProximaNova";
-//   src: url(/src/fonts/Proxima/Proxima-Black.otf) format("truetype");
-// }
-
-// @font-face {
-//   font-family: "ProximaNova";
-//   src: url(/src/fonts/Proxima/Proxima-Alt-Thin.otf) format("truetype");
-// }
-
-// @font-face {
-//   font-family: "ProximaNova";
-//   src: url(/src/fonts/Proxima/Proxima-Alt-Light.otf) format("truetype");
-// }
-
-// @font-face {
-//   font-family: "ProximaNova";
-//   src: url(/src/fonts/Proxima/Proxima-Alt-Bold.otf) format("truetype");
-// }
-
-
-
-// Aeonik Font Family
 @font-face {
   font-family: "Aeonik";
-  src: url(/src/fonts/Aeonik/Aeonik-Air.otf) format("truetype");
+  src: url(/src/fonts/Aeonik/Aeonik-Medium.otf) format("opentype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Aeonik";
-  src: url(/src/fonts/Aeonik/Aeonik-Black.otf) format("truetype");
+  src: url(/src/fonts/Aeonik/Aeonik-Regular.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Aeonik";
-  src: url(/src/fonts/Aeonik/Aeonik-Bold.otf) format("truetype");
-}
-
-@font-face {
-  font-family: "Aeonik";
-  src: url(/src/fonts/Aeonik/Aeonik-Light.otf) format("truetype");
-}
-
-@font-face {
-  font-family: "Aeonik";
-  src: url(/src/fonts/Aeonik/Aeonik-Medium.otf) format("truetype");
-}
-
-@font-face {
-  font-family: "Aeonik";
-  src: url(/src/fonts/Aeonik/Aeonik-Regular.otf) format("truetype");
-}
-
-@font-face {
-  font-family: "Aeonik";
-  src: url(/src/fonts/Aeonik/Aeonik-Thin.otf) format("truetype");
+  src: url(/src/fonts/Aeonik/Aeonik-Thin.otf) format("opentype");
+  font-weight: 100;
+  font-style: normal;
 }

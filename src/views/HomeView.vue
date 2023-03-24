@@ -1,15 +1,22 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <h2>home page!!</h2>
+  <div class="home-page">
+    <feature-block />
+    <status-container />
+    <feature-section />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import FeatureBlock from "@/components/FeatureBlock.vue";
+import StatusContainer from "@/components/StatusContainer.vue";
+import FeatureSection from "@/components/FeatureSection.vue";
 
 export default {
   name: "HomeView",
-  components: {},
+  components: {
+    "feature-block": FeatureBlock,
+    "status-container": StatusContainer,
+    "feature-section": FeatureSection,
+  },
 };
 </script>

@@ -140,6 +140,8 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
+  background: white;
+  z-index: 10;
 
   .munu-items {
     display: flex;
