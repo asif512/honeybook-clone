@@ -61,6 +61,10 @@ export default {
       margin-bottom: 20px;
     }
 
+    @include forLarge() {
+      margin-bottom: 20px;
+    }
+
     .staus-amount-label {
       font-size: 26px;
       font-weight: 600;
@@ -80,6 +84,7 @@ export default {
 
         @include forLarge() {
           font-size: 34px;
+          font-weight: 600;
         }
       }
     }
