@@ -15,6 +15,12 @@
   }
 }
 
+@mixin forXl {
+  @media (max-width: 1064px) {
+    @content;
+  }
+}
+
 @mixin forDesktop {
   @media (max-width: 1200px) {
     @content;

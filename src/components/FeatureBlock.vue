@@ -116,23 +116,6 @@ export default {
     margin-bottom: 52px;
   }
 
-  .trial-btn {
-    background-color: $btn-color;
-    box-shadow: none;
-    color: $white;
-    font-size: 18px;
-    height: 48px;
-    line-height: 24px;
-    padding: 1px 24px 0;
-    border-radius: 6px;
-    font-weight: 600;
-    border: none;
-
-    &:active {
-      background: $btn-color;
-    }
-  }
-
   .card-required--no {
     color: $gray-1;
     margin-top: 12px;

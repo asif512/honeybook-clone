@@ -104,8 +104,8 @@ export default {
               isSubMenus: false,
             },
             {
-              label: "khowledgebase",
-              to: "khowledgebase",
+              label: "knowledgebase",
+              to: "knowledgebase",
               isSubMenus: false,
             },
             {
