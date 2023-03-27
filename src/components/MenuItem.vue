@@ -6,7 +6,7 @@
     <div v-else class="hero-menu-wrapper">
       <span>{{ menu.label }}</span>
       <b-icon class="menu-icon" icon="chevron-down" />
-      <div class="hero-menu">
+      <div class="hero-menu" :style="getHeroMenuStyles">
         <div
           class="hero-menu__item"
           v-for="(subMenu, i) in menu.subMenus"
@@ -26,6 +26,13 @@
 export default {
   name: "MenuItem",
   props: ["menu"],
+  computed: {
+    getHeroMenuStyles() {
+      return {
+        width: `${this.menu.width}px`,
+      };
+    },
+  },
 };
 </script>
 
@@ -68,7 +75,7 @@ export default {
       .hero-menu {
         display: block;
         transition: all 0.3s ease-in-out 0.1s;
-        width: 400px;
+        // width: 400px;
         background: $white;
         border-radius: 2px;
         box-shadow: 0 14px 28px 0 rgba(0, 18, 71, 0.15),

@@ -30,6 +30,7 @@ export default {
         {
           label: "company",
           isSubMenus: true,
+          width: 400,
           subMenus: [
             {
               label: "about us",
@@ -51,6 +52,7 @@ export default {
         {
           label: "apps",
           isSubMenus: true,
+          width: 520,
           subMenus: [
             {
               label: "app display page",
@@ -60,6 +62,11 @@ export default {
             {
               label: "request feature",
               to: "request-feature",
+              isSubMenus: false,
+            },
+            {
+              label: "all in one business platform",
+              to: "all-in-one-business-platform",
               isSubMenus: false,
             },
             {
@@ -87,6 +94,7 @@ export default {
         {
           label: "resources",
           isSubMenus: true,
+          width: 400,
           subMenus: [
             {
               label: "blog",

@@ -7,11 +7,17 @@
       <h3 class="sub-title">What do you want to do with HoneyBook?</h3>
     </div>
     <div class="feature-checklist">
+      <!-- <div class="back-button navigation-btn">
+        <b-icon class="icon back-icon" icon="chevron-double-left" />
+      </div> -->
       <feature-checklist-card
         v-for="(feature, index) in features"
         :key="index"
         :feature="feature"
       />
+      <!-- <div class="right-button navigation-btn">
+        <b-icon class="icon next-icon" icon="chevron-double-right" />
+      </div> -->
     </div>
     <b-button class="trial-btn">Start free trial</b-button>
     <p class="card-required--no">No credit card required</p>
@@ -112,8 +118,23 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 8px;
     margin-bottom: 52px;
+    position: relative;
+
+    // .navigation-btn {
+    //   width: 40px;
+    //   height: 40px;
+    //   border-radius: 20px;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    //   background: $white;
+    //   border: 1px solid $white;
+    //   cursor: pointer;
+    // }
   }
 
   .card-required--no {
