@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <the-header />
+    <the-header v-if="!renderHeader" />
     <!-- <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -8,7 +8,7 @@
     <main class="main-content">
       <router-view />
     </main>
-    <the-footer />
+    <the-footer v-if="!renderFooter" />
   </div>
 </template>
 
@@ -21,6 +21,14 @@ export default {
     "the-header": TheHeader,
     "the-footer": TheFooter,
   },
+  computed: {
+    renderHeader() {
+      return this.$route.meta.isHideHeader;
+    },
+    renderFooter() {
+      return this.$route.meta.isHideFooter;
+    },
+  },
 };
 </script>
 
@@ -32,7 +40,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: $dark-1;
 }
 
 .main-content {

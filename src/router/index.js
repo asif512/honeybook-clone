@@ -9,10 +9,18 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
   },
   {
-    path: "/about",
-    name: "about",
+    path: "/about-us",
+    name: "AboutView",
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
