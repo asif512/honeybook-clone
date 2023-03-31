@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import CareersView from "../views/CareersView.vue";
+import ContactView from "../views/ContactView.vue";
 
 Vue.use(VueRouter);
 
@@ -23,6 +25,24 @@ const routes = [
     },
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+  },
+  {
+    path: "/careers",
+    name: "CareersView",
+    component: CareersView,
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
+  },
+  {
+    path: "/contact-us",
+    name: "ContactView",
+    component: ContactView,
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
   },
 ];
 

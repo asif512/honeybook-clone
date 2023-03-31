@@ -1,8 +1,8 @@
 <template>
   <div class="hero-section container">
     <div class="about-content">
-      <h2 class="title">About HoneyBook</h2>
-      <h3 class="sub-title">
+      <h2 class="title title-1">About HoneyBook</h2>
+      <h3 class="sub-title title-2">
         Empowering independent businesses to rise together doing what they love.
       </h3>
     </div>
@@ -43,11 +43,11 @@ export default {
       width: 60%;
     }
     .title {
-      font-size: 48px;
-      line-height: 1.25;
+      // font-size: 48px;
+      // line-height: 1.25;
       width: 60%;
       margin-bottom: 20px;
-      font-weight: 600;
+      // font-weight: 600;
 
       @include forMedium() {
         width: 100%;
@@ -55,12 +55,12 @@ export default {
     }
 
     .sub-title {
-      font-family: ProximaNova, sans-serif;
-      font-weight: 400;
+      // font-family: ProximaNova, sans-serif;
+      // font-weight: 400;
       margin-bottom: 30px;
       max-width: 480px;
-      font-size: 20px;
-      line-height: 1.44;
+      // font-size: 20px;
+      // line-height: 1.44;
     }
   }
 

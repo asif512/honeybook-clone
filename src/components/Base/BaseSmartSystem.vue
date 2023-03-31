@@ -1,15 +1,20 @@
 <template>
-  <div class="smarter-system-section">
+  <div class="base-smarter-system" :style="getStyles">
     <div class="bg-image-wrapper container">
       <div class="bg-image">
         <div class="content">
-          <h2 class="title">A smarter system that puts you in control</h2>
-          <h3 class="sub-title">
-            With your workflow and cashflow all in one place, you can focus on
-            getting the most out of work and life.
-          </h3>
-          <b-button class="trial-btn">Start free trial</b-button>
-          <div class="requie-label">No credit card required</div>
+          <slot>
+            <h2 class="title title-1">{{ info.title }}</h2>
+            <h3 class="sub-title title-2">
+              {{ info.subTitle }}
+            </h3>
+            <b-button v-if="info.buttonLabel" class="trial-btn">
+              {{ info.buttonLabel }}
+            </b-button>
+            <div v-if="info.requireLabel" class="requie-label">
+              {{ info.requireLable }}
+            </div>
+          </slot>
         </div>
       </div>
     </div>
@@ -18,16 +23,30 @@
 
 <script>
 export default {
-  name: "SmarterSystemSection",
+  name: "BaseSmartSystem",
+  props: {
+    info: {
+      type: Object,
+    },
+  },
+  computed: {
+    getStyles() {
+      return {
+        "--largeImage": `url(${this.info.largeImage})`,
+        "--smallImage": `url(${this.info.smallImage})`,
+        "--backgroundColor": this.info.backgroundColor,
+      };
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/scss/app.scss";
 
-.smarter-system-section {
+.base-smarter-system {
   font-family: Aeonik, ProximaNova, sans-serif;
-  background: $light-3;
+  background: var(--backgroundColor);
   padding-top: 96px;
   padding-bottom: 96px;
   color: $dark-1;
@@ -39,8 +58,7 @@ export default {
 
   .bg-image-wrapper {
     .bg-image {
-      background: url(//res.cloudinary.com/honeybook/image/upload/f_auto,fl_lossy,q_auto/v1677950938/marketing_site/home_page/Desktop_Better_System_2x.png)
-        no-repeat;
+      background: var(--largeImage) no-repeat;
       background-position: bottom;
       background-size: auto 575px;
       height: 575px;
@@ -91,8 +109,7 @@ export default {
       }
 
       @include forLarge() {
-        background: url(//res.cloudinary.com/honeybook/image/upload/f_auto,fl_lossy,q_auto/v1677950937/marketing_site/home_page/Mobile_Better_System_2x.png)
-          no-repeat;
+        background: var(--smallImage) no-repeat;
         background-position: bottom;
         background-size: auto 278px;
         height: 580px;

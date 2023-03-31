@@ -8,7 +8,7 @@
     <showcase-section />
     <promo-section />
     <integration-app />
-    <smarter-system-section />
+    <base-smarter-system :info="systemInfo" />
     <mobile-review-section />
     <testimonial-section />
     <truested-companies />
@@ -26,7 +26,7 @@ import ExperienceSection from "@/components/ExperienceSection.vue";
 import ShowcaseSection from "@/components/ShowcaseSection.vue";
 import PromoSection from "@/components/PromoSection.vue";
 import IntegrationApp from "@/components/IntegrationApp.vue";
-import SmarterSystemSection from "@/components/SmarterSystemSection.vue";
+import BaseSmartSystem from "@/components/Base/BaseSmartSystem.vue";
 import MobileReviewSection from "@/components/MobileReviewSection.vue";
 import TestimonialSection from "@/components/TestimonailSection.vue";
 import TruestedCompanies from "@/components/TruestedCompanies.vue";
@@ -34,6 +34,22 @@ import DiscoverSection from "@/components/DiscoverSection.vue";
 import PromotionSection from "@/components/PromotionSection.vue";
 export default {
   name: "HomeView",
+  data() {
+    return {
+      systemInfo: {
+        title: "A smarter system that puts you in control",
+        subTitle:
+          "With your workflow and cashflow all in one place, you can focus on getting the most out of work and life.",
+        buttonLabel: "Start free trial",
+        requireLabel: "No credit card required",
+        backgroundColor: "#faf5f0",
+        largeImage:
+          "//res.cloudinary.com/honeybook/image/upload/f_auto,fl_lossy,q_auto/v1677950938/marketing_site/home_page/Desktop_Better_System_2x.png",
+        smallImage:
+          "//res.cloudinary.com/honeybook/image/upload/f_auto,fl_lossy,q_auto/v1677950937/marketing_site/home_page/Mobile_Better_System_2x.png",
+      },
+    };
+  },
   components: {
     "feature-block": FeatureBlock,
     "status-container": StatusContainer,
@@ -43,7 +59,7 @@ export default {
     "showcase-section": ShowcaseSection,
     "promo-section": PromoSection,
     "integration-app": IntegrationApp,
-    "smarter-system-section": SmarterSystemSection,
+    "base-smarter-system": BaseSmartSystem,
     "mobile-review-section": MobileReviewSection,
     "testimonial-section": TestimonialSection,
     "truested-companies": TruestedCompanies,

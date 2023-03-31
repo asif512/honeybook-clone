@@ -48,3 +48,25 @@
     background: $btn-color;
   }
 }
+
+.title-1 {
+  font-size: 48px;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-bottom: 8px;
+
+  @include forLarge() {
+    .title {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
+
+.title-2{
+  font-family: ProximaNova, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.44;
+  margin: 0 auto 26px;
+}
