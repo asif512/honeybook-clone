@@ -7,16 +7,21 @@
       <span>{{ menu.label }}</span>
       <b-icon class="menu-icon" icon="chevron-down" />
       <div class="hero-menu" :style="getHeroMenuStyles">
-        <div
+        <!-- <div
           class="hero-menu__item"
           v-for="(subMenu, i) in menu.subMenus"
           :key="i"
+        > -->
+        <router-link
+          class="hero-menu__item"
+          v-for="(subMenu, i) in menu.subMenus"
+          :key="i"
+          :to="`${subMenu.to}`"
         >
-          <router-link :to="`${subMenu.to}`">
-            <b-icon class="hero-menu__item__icon" icon="dash-square" />
-            <span class="hero-menu__item__label">{{ subMenu.label }}</span>
-          </router-link>
-        </div>
+          <b-icon class="hero-menu__item__icon" icon="dash-square" />
+          <span class="hero-menu__item__label">{{ subMenu.label }}</span>
+        </router-link>
+        <!-- </div> -->
       </div>
     </div>
   </div>
@@ -75,7 +80,6 @@ export default {
       .hero-menu {
         display: block;
         transition: all 0.3s ease-in-out 0.1s;
-        // width: 400px;
         background: $white;
         border-radius: 2px;
         box-shadow: 0 14px 28px 0 rgba(0, 18, 71, 0.15),
@@ -96,9 +100,6 @@ export default {
 
           &:hover {
             background: #eef2f4;
-          }
-
-          .hero-menu__item__icon {
           }
 
           .hero-menu__item__label {
