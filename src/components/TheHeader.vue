@@ -1,8 +1,6 @@
 <template>
   <div class="header">
-    <div class="logo">
-      <h2>honeybook clone</h2>
-    </div>
+    <router-link class="logo" to="/">honeybook clone </router-link>
     <div style="display: flex; align-items: center">
       <div class="munu-items">
         <menu-item
@@ -148,8 +146,17 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
-  background: white;
+  background: $white;
   z-index: 10;
+
+  .logo {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.001rem;
+    color: $dark-1;
+  }
 
   .munu-items {
     display: flex;

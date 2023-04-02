@@ -44,6 +44,38 @@ const routes = [
       isHideFooter: false,
     },
   },
+  {
+    path: "/app-display-page",
+    name: "AppDisplayPage",
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
+    component: () =>
+      import(
+        /* webpackChunkName: "appDisplayPage" */ "../views/AppDisplayPage.vue"
+      ),
+  },
+  {
+    path: "/roadmap",
+    name: "RoadmapView",
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
+    component: () =>
+      import(/* webpackChunkName: "raodmap" */ "../views/RoadmapView.vue"),
+  },
+  {
+    path: "/pricing",
+    name: "PricingView",
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
+    component: () =>
+      import(/* webpackChunkName: "pricing" */ "../views/PricingView.vue"),
+  },
 ];
 
 const router = new VueRouter({

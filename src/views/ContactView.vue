@@ -78,29 +78,18 @@
         </b-card>
       </div>
     </div>
-    <div class="banner">
-      <div class="container wrapper">
-        <img
-          class="image"
-          src="https://res.cloudinary.com/honeybook/image/upload/c_scale,w_auto/v1/marketing_site/footer-illustration-grouped.svg"
-          alt="img"
-        />
-        <h2 class="title">It's free to try. We hope you do.</h2>
-        <h4 class="sub-title">
-          93% of members would recommend HoneyBook to a friend.
-        </h4>
-        <b-button class="trial-btn">Start free trail</b-button>
-      </div>
-    </div>
+    <base-banner />
   </div>
 </template>
 
 <script>
 import HeroSection from "@/components/contact/HeroSection.vue";
+import BaseBanner from "@/components/Base/BaseBanner.vue";
 export default {
   name: "ContactView",
   components: {
     "hero-section": HeroSection,
+    "base-banner": BaseBanner,
   },
   data() {
     return {
@@ -257,36 +246,6 @@ export default {
       .answer {
         font-size: 16px;
         font-weight: 400;
-      }
-    }
-  }
-  .banner {
-    background-color: $dark-2;
-    margin-top: 60px;
-    font-family: ProximaNova, sans-serif;
-    color: $white;
-    overflow: hidden;
-    padding-bottom: 20px;
-
-    .wrapper {
-      .image {
-        height: 159px;
-        position: relative;
-        top: -20px;
-        width: 66px;
-      }
-      .title {
-        font-size: 40px;
-        line-height: 1.18;
-        font-weight: 400;
-      }
-
-      .sub-title {
-        font-size: 18px;
-        font-weight: 300;
-        line-height: 1.44;
-        font-weight: 400;
-        padding: 23px 0;
       }
     }
   }
