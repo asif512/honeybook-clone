@@ -5,7 +5,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </nav> -->
-    <main class="main-content">
+    <main class="main-content" :class="{ 'simple-layout': !renderHeader }">
       <router-view />
     </main>
     <the-footer v-if="!renderFooter" />
@@ -44,6 +44,8 @@ export default {
 }
 
 .main-content {
-  margin-top: 78px;
+  &.simple-layout {
+    margin-top: 78px;
+  }
 }
 </style>

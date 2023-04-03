@@ -76,6 +76,18 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "pricing" */ "../views/PricingView.vue"),
   },
+  {
+    path: "/help-center",
+    name: "HelpCenterView",
+    meta: {
+      isHideHeader: true,
+      isHideFooter: true,
+    },
+    component: () =>
+      import(
+        /* webpackChunkName: "HelpCenterView" */ "../views/HelpCenterView.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({
