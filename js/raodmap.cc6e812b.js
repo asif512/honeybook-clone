@@ -1,2 +1,2 @@
 "use strict";(self["webpackChunkhoneybook_clone"]=self["webpackChunkhoneybook_clone"]||[]).push([[487],{6901:function(a,e,t){t.r(e),t.d(e,{default:function(){return u}});var n=function(){var a=this,e=a._self._c;return e("div",{staticClass:"roadmap container"},[e("div",{staticClass:"hero-section"},[e("h2",{staticClass:"title"},[a._v("Our Roadmap")]),e("h4",{staticClass:"sub-title"},[a._v(" Here you always have an overview of what we are currently working on and can make your own suggestions for development. ")]),e("b-button",{staticClass:"trial-btn"},[a._v("submit idea")])],1)])},s=[],o={name:"RoadmapView"},i=o,r=t(1001),l=(0,r.Z)(i,n,s,!1,null,"2cbad1a2",null),u=l.exports}}]);
-//# sourceMappingURL=raodmap.5ef3e4ad.js.map
+//# sourceMappingURL=raodmap.cc6e812b.js.map
