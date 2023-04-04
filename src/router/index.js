@@ -88,6 +88,18 @@ const routes = [
         /* webpackChunkName: "HelpCenterView" */ "../views/HelpCenterView.vue"
       ),
   },
+  {
+    path: "/referrals",
+    name: "ReferralsView",
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
+    component: () =>
+      import(
+        /* webpackChunkName: "ReferralsView" */ "../views/ReferralsView.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({

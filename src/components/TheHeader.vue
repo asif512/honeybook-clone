@@ -115,8 +115,8 @@ export default {
               isSubMenus: false,
             },
             {
-              label: "referals",
-              to: "referals",
+              label: "referrals",
+              to: "referrals",
               isSubMenus: false,
             },
             {
