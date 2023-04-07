@@ -141,7 +141,8 @@ export default {
         .elemnent-media {
           width: 50%;
           .image {
-            width: 100%;
+            max-height: 500px;
+            width: auto;
           }
         }
       }
@@ -156,6 +157,23 @@ export default {
             padding-right: 0;
             padding-left: 65px;
           }
+
+          @include forLarge() {
+            flex-direction: column;
+
+            .elemnent-media {
+              margin-top: 60px;
+              width: 100%;
+            }
+            .feature-content {
+              text-align: center;
+              padding-left: 0;
+
+              .title {
+                font-size: 30px;
+              }
+            }
+          }
         }
       }
 
@@ -164,12 +182,36 @@ export default {
           .feature-content {
             .title {
               font-size: 51px;
+              @include forLarge() {
+                font-size: 30px;
+              }
             }
 
             .trial-btn {
               background: $btn-color;
               margin-top: 50px;
             }
+          }
+        }
+      }
+
+      @include forLarge() {
+        .container {
+          flex-direction: column;
+
+          .feature-content {
+            width: 100%;
+            text-align: center;
+            padding-right: 0;
+
+            .title {
+              font-size: 30px;
+            }
+          }
+
+          .elemnent-media {
+            margin-top: 60px;
+            width: 100%;
           }
         }
       }

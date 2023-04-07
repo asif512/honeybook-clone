@@ -63,11 +63,6 @@ export default {
               isSubMenus: false,
             },
             {
-              label: "all in one business platform",
-              to: "all-in-one-business-platform",
-              isSubMenus: false,
-            },
-            {
               label: "roadmap",
               to: "roadmap",
               isSubMenus: false,

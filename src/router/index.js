@@ -109,7 +109,19 @@ const routes = [
     },
     component: () =>
       import(
-        /* webpackChunkName: "ReferralsView" */ "../views/ChangelogView.vue"
+        /* webpackChunkName: "ChangelogView" */ "../views/ChangelogView.vue"
+      ),
+  },
+  {
+    path: "/community",
+    name: "CommunityView",
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
+    component: () =>
+      import(
+        /* webpackChunkName: "CommunityView" */ "../views/CommunityView.vue"
       ),
   },
 ];
