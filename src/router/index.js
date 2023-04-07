@@ -100,6 +100,18 @@ const routes = [
         /* webpackChunkName: "ReferralsView" */ "../views/ReferralsView.vue"
       ),
   },
+  {
+    path: "/changelog",
+    name: "ChangelogView",
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
+    component: () =>
+      import(
+        /* webpackChunkName: "ReferralsView" */ "../views/ChangelogView.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({
