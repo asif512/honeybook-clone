@@ -124,6 +124,18 @@ const routes = [
         /* webpackChunkName: "CommunityView" */ "../views/CommunityView.vue"
       ),
   },
+  {
+    path: "/knowledgebase",
+    name: "KnowledgebaseView",
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
+    component: () =>
+      import(
+        /* webpackChunkName: "KnowledgebaseView" */ "../views/KnowledgebaseView.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({
