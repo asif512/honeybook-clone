@@ -7,11 +7,6 @@
       <span>{{ menu.label }}</span>
       <b-icon class="menu-icon" icon="chevron-down" />
       <div class="hero-menu" :style="getHeroMenuStyles">
-        <!-- <div
-          class="hero-menu__item"
-          v-for="(subMenu, i) in menu.subMenus"
-          :key="i"
-        > -->
         <router-link
           class="hero-menu__item"
           v-for="(subMenu, i) in menu.subMenus"
@@ -21,7 +16,6 @@
           <b-icon class="hero-menu__item__icon" icon="dash-square" />
           <span class="hero-menu__item__label">{{ subMenu.label }}</span>
         </router-link>
-        <!-- </div> -->
       </div>
     </div>
   </div>

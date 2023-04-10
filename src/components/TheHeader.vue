@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <router-link class="logo" to="/">honeybook clone </router-link>
-    <div style="display: flex; align-items: center">
+    <div class="desktop" style="display: flex; align-items: center">
       <div class="munu-items">
         <menu-item
           class="hover-class"
@@ -12,20 +12,42 @@
       </div>
       <b-button class="trail-btn">Start trail free</b-button>
     </div>
+    <div class="mobile">
+      <div class="icon-wrapper" @click="handleCollapse">
+        <b-icon
+          class="menu-icon"
+          :icon="isCollapse ? 'x' : ' blockquote-left'"
+        />
+      </div>
+      <div class="menu-items" v-if="isCollapse">
+        <mobile-menu-item
+          v-for="(menu, index) in menus"
+          :key="index"
+          :menu="menu"
+          @collapse-menu="handleCollpaseMenu"
+          @collapse-menus="handleCollapse"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import MenuItem from "@/components/MenuItem.vue";
+import MobileMenuItem from "@/components/MobileMenuItem.vue";
 export default {
   name: "TheHeader",
   components: {
     "menu-item": MenuItem,
+    "mobile-menu-item": MobileMenuItem,
   },
   data() {
     return {
+      isCollapse: false,
       menus: [
         {
+          id: 1,
+          isCollape: true,
           label: "company",
           isSubMenus: true,
           width: 400,
@@ -48,6 +70,8 @@ export default {
           ],
         },
         {
+          id: 2,
+          isCollape: false,
           label: "apps",
           isSubMenus: true,
           width: 520,
@@ -80,11 +104,15 @@ export default {
           ],
         },
         {
+          id: 3,
+          isCollape: false,
           label: "pricing",
           to: "pricing",
           isSubMenus: false,
         },
         {
+          id: 4,
+          isCollape: false,
           label: "resources",
           isSubMenus: true,
           width: 400,
@@ -124,6 +152,18 @@ export default {
       ],
     };
   },
+  methods: {
+    handleCollapse() {
+      this.isCollapse = !this.isCollapse;
+    },
+    handleCollpaseMenu(menu) {
+      this.menus.forEach((item) => {
+        if (item.id == menu.id) {
+          item.isCollape = !item.isCollape;
+        }
+      });
+    },
+  },
 };
 </script>
 
@@ -144,6 +184,10 @@ export default {
   background: $white;
   z-index: 10;
 
+  @include forLarge() {
+    position: inherit;
+  }
+
   .logo {
     text-decoration: none;
     font-size: 20px;
@@ -153,26 +197,70 @@ export default {
     color: $dark-1;
   }
 
-  .munu-items {
-    display: flex;
+  .desktop {
+    .munu-items {
+      display: flex;
+    }
+
+    .trail-btn {
+      background-color: $dark-1;
+      border-color: transparent;
+      box-shadow: none;
+      color: $white;
+      font-size: 16px;
+      border: 5px;
+      height: 36px;
+      line-height: 16px;
+      padding: 1px 16px 0;
+      margin-left: 10px;
+
+      &:hover {
+        background-color: $dark-1;
+        box-shadow: none;
+        color: $light-1;
+      }
+    }
+
+    @include forLarge() {
+      display: none !important;
+    }
   }
 
-  .trail-btn {
-    background-color: $dark-1;
-    border-color: transparent;
-    box-shadow: none;
-    color: $white;
-    font-size: 16px;
-    border: 5px;
-    height: 36px;
-    line-height: 16px;
-    padding: 1px 16px 0;
-    margin-left: 10px;
+  .mobile {
+    display: none;
+    text-align: left;
+    transition: opacity 1s ease-out;
+    opacity: 0;
 
-    &:hover {
-      background-color: $dark-1;
-      box-shadow: none;
-      color: $light-1;
+    @include forLarge() {
+      display: block;
+      opacity: 1;
+      .icon-wrapper {
+        accent-color: $light-7;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        .menu-icon {
+          cursor: pointer;
+          width: 20px;
+          height: 20px;
+        }
+
+        &:hover {
+          background: $light-7;
+        }
+      }
+
+      .menu-items {
+        position: absolute;
+        background: $light-9;
+        inset: 80px 0 0 0;
+        z-index: 10;
+        padding: 24px;
+      }
     }
   }
 }
