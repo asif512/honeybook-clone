@@ -136,6 +136,18 @@ const routes = [
         /* webpackChunkName: "KnowledgebaseView" */ "../views/KnowledgebaseView.vue"
       ),
   },
+  {
+    path: "/developers",
+    name: "DevelopersView",
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
+    component: () =>
+      import(
+        /* webpackChunkName: "DevelopersView" */ "../views/DevelopersView.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({

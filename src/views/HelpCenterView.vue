@@ -55,6 +55,7 @@ export default {
   name: "HelpCenterView",
   data() {
     return {
+      inputField: "",
       articles: [
         {
           logo: "circle",
