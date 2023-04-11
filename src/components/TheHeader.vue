@@ -10,6 +10,24 @@
           :menu="menu"
         />
       </div>
+      <b-dropdown
+        id="dropdown-right"
+        right
+        text="Features"
+        variant="outline-primary"
+        class="m-2"
+      >
+        <div class="feature-wrapper">
+          <div
+            v-for="(feature, index) in features"
+            class="feature"
+            :key="index"
+          >
+            <img class="feature-logo" :src="feature.logo" alt="logo" />
+            <span class="feature-label">{{ feature.label }}</span>
+          </div>
+        </div>
+      </b-dropdown>
       <b-button class="trail-btn">Start trail free</b-button>
     </div>
     <div class="mobile">
@@ -74,16 +92,11 @@ export default {
           isCollape: false,
           label: "apps",
           isSubMenus: true,
-          width: 520,
+          width: 400,
           subMenus: [
             {
               label: "app display page",
               to: "app-display-page",
-              isSubMenus: false,
-            },
-            {
-              label: "request feature",
-              to: "request-feature",
               isSubMenus: false,
             },
             {
@@ -150,6 +163,32 @@ export default {
           ],
         },
       ],
+      features: [
+        {
+          label: "account",
+          logo: "https://media.istockphoto.com/id/1092806334/photo/smiling-businesswoman-at-work.jpg?s=612x612&w=0&k=20&c=hHGzCTROxU1iNU9ehlt4dsdvvCnu0KF9ayGBz1zXNds=",
+        },
+        {
+          label: "github",
+          logo: "https://cdn.freebiesupply.com/logos/large/2x/github-icon-logo-png-transparent.png",
+        },
+        {
+          label: "gmail",
+          logo: "https://e7.pngegg.com/pngimages/158/639/png-clipart-spotify-streaming-media-logo-playlist-spotify-app-icon-logo-music-download.png",
+        },
+        {
+          label: "account",
+          logo: "https://www.citypng.com/public/uploads/preview/mail-email-address-round-outline-red-icon-transparent-png-11637079483awtlikdw1f.png",
+        },
+        {
+          label: "discord",
+          logo: "https://logodownload.org/wp-content/uploads/2017/11/discord-logo-1-1.png",
+        },
+        {
+          label: "xbox",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/1024px-Xbox_one_logo.svg.png",
+        },
+      ],
     };
   },
   methods: {
@@ -200,6 +239,71 @@ export default {
   .desktop {
     .munu-items {
       display: flex;
+    }
+
+    #dropdown-right {
+      #dropdown-right__BV_toggle_ {
+        border: 1px solid $light-7;
+        padding: 8px 23px;
+        border-radius: 30px;
+        color: $dark-1;
+
+        &:focus-visible {
+          box-shadow: none;
+          background: transparent;
+        }
+        &:active {
+          background: transparent;
+        }
+
+        &:hover {
+          background: transparent;
+          color: $dark-1;
+        }
+      }
+      .dropdown-menu {
+        top: 18px !important;
+        width: 240px;
+        box-shadow: 0px 7px 17px 1px #ccc;
+        border: 1px solid $white;
+        border-radius: 8px;
+
+        .feature-wrapper {
+          padding: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 24px 22px;
+          align-items: center;
+          justify-content: center;
+          .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .feature-label {
+              font-size: 16px;
+              font-weight: 400;
+              text-transform: capitalize;
+            }
+            .feature-logo {
+              width: 40px;
+              height: 40px;
+              border-radius: 25px;
+              overflow: hidden;
+            }
+          }
+        }
+        &::before {
+          content: "";
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          top: -9px;
+          right: 19px;
+          transform: rotate(45deg);
+          border-left: 1px solid #ccc;
+          border-top: 1px solid #ccc;
+        }
+      }
     }
 
     .trail-btn {

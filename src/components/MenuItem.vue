@@ -4,8 +4,10 @@
       menu.label
     }}</router-link>
     <div v-else class="hero-menu-wrapper">
-      <span>{{ menu.label }}</span>
-      <b-icon class="menu-icon" icon="chevron-down" />
+      <div class="menu-name" :class="menu.label">
+        <span>{{ menu.label }}</span>
+        <b-icon class="menu-icon" icon="chevron-down" />
+      </div>
       <div class="hero-menu" :style="getHeroMenuStyles">
         <router-link
           class="hero-menu__item"
@@ -59,6 +61,15 @@ export default {
     height: 78px;
     display: flex;
     align-items: center;
+
+    .menu-name {
+      margin: 0 4px;
+      &.apps {
+        border: 1px solid $light-7;
+        padding: 8px 23px;
+        border-radius: 30px;
+      }
+    }
 
     .menu-icon {
       margin-left: 8px;
