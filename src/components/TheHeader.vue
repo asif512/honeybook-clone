@@ -132,7 +132,7 @@ export default {
           subMenus: [
             {
               label: "blog",
-              to: "blod",
+              to: "blog",
               isSubMenus: false,
             },
             {

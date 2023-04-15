@@ -148,6 +148,16 @@ const routes = [
         /* webpackChunkName: "DevelopersView" */ "../views/DevelopersView.vue"
       ),
   },
+  {
+    path: "/blog",
+    name: "BlogView",
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
+    component: () =>
+      import(/* webpackChunkName: "BlogView" */ "../views/BlogView.vue"),
+  },
 ];
 
 const router = new VueRouter({
