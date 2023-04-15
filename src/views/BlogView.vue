@@ -15,7 +15,7 @@
         </div>
         <div class="blog-content">
           <div class="media-element">
-            <router-link :to="selectedBlog.posts[0].href">
+            <router-link :to="`/blog/${selectedBlog.posts[0].href}`">
               <img
                 class="image"
                 :src="selectedBlog.posts[0].image"
@@ -32,7 +32,7 @@
               <img :src="post.image" alt="image" class="post-image" />
               <div class="info">
                 <h2 class="title">{{ post.title }}</h2>
-                <router-link class="read-more" :to="post.href"
+                <router-link class="read-more" :to="`/blog/${post.href}`"
                   >Read more</router-link
                 >
               </div>

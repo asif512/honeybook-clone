@@ -158,6 +158,16 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "BlogView" */ "../views/BlogView.vue"),
   },
+  {
+    path: "/blog/:id",
+    name: "PostDetails",
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
+    component: () =>
+      import(/* webpackChunkName: "PostDetails" */ "../views/PostDetails.vue"),
+  },
 ];
 
 const router = new VueRouter({
