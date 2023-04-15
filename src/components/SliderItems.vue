@@ -153,6 +153,8 @@ export default {
         font-weight: 500;
         line-height: 26px;
         margin-bottom: 20px;
+        text-align: center;
+        margin-top: 20px;
       }
     }
   }

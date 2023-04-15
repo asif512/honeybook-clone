@@ -5,7 +5,9 @@
       <div class="footer-menus" v-for="(menu, index) in menus" :key="index">
         <h2 class="menu-title">{{ menu.label }}</h2>
         <div class="footer-menu" v-for="(page, i) in menu.pages" :key="i">
-          <h3 class="page-title">{{ page.label }}</h3>
+          <router-link class="page-title" :to="page.href">
+            {{ page.label }}</router-link
+          >
         </div>
       </div>
     </div>
@@ -23,15 +25,15 @@ export default {
           pages: [
             {
               label: "about us",
-              href: "#",
+              href: "about-us",
             },
             {
               label: "contact us",
-              href: "#",
+              href: "contact-us",
             },
             {
               label: "careers",
-              href: "#",
+              href: "careers",
             },
           ],
         },
@@ -40,19 +42,19 @@ export default {
           pages: [
             {
               label: "roadmap",
-              href: "#",
+              href: "roadmap",
             },
             {
               label: "reviews",
-              href: "#",
+              href: "review",
             },
             {
-              label: "request feature",
-              href: "#",
+              label: "app display page",
+              href: "app-display-page",
             },
             {
               label: "changelog",
-              href: "#",
+              href: "changelog",
             },
           ],
         },
@@ -60,28 +62,28 @@ export default {
           label: "resources",
           pages: [
             {
-              label: "blogs",
-              href: "#",
+              label: "blog",
+              href: "blog",
             },
             {
               label: "help center",
-              href: "#",
+              href: "help-center",
             },
             {
               label: "referals",
-              href: "#",
+              href: "referrals",
             },
             {
               label: "community",
-              href: "#",
+              href: "community",
             },
             {
               label: "knowledgebase",
-              href: "#",
+              href: "khowledgebase",
             },
             {
               label: "developers",
-              href: "#",
+              href: "developers",
             },
           ],
         },
@@ -129,6 +131,8 @@ export default {
           line-height: 1.6;
           font-weight: 400;
           text-transform: capitalize;
+          color: $dark-1;
+          text-decoration: none;
         }
       }
     }
