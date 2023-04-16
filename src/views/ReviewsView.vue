@@ -119,7 +119,15 @@
                     triggers="focus"
                     placement="bottom"
                   >
-                    Danger variant popover
+                    <h2 class="title" style="font-size: 16px; font-weight: 600">
+                      Contact
+                    </h2>
+                    <p style="font-size: 12px; font-weight: 400">
+                      {{ store.contact.email }}
+                    </p>
+                    <p style="font-size: 12px; font-weight: 400">
+                      {{ store.contact.location }}
+                    </p>
                   </b-popover>
                 </div>
                 <div class="contact">
@@ -136,7 +144,15 @@
                     triggers="focus"
                     placement="bottom"
                   >
-                    Danger variant popover
+                    <h2 class="title" style="font-size: 16px; font-weight: 600">
+                      Contact
+                    </h2>
+                    <p style="font-size: 12px; font-weight: 400">
+                      {{ store.contact.email }}
+                    </p>
+                    <p style="font-size: 12px; font-weight: 400">
+                      {{ store.contact.location }}
+                    </p>
                   </b-popover>
                 </div>
                 <span class="provider-coupon-label provider">{{
