@@ -2,7 +2,6 @@
 
 .container {
   max-width: 1140px;
-  // padding: 0 4rem;
   margin: 0 auto;
 }
 
@@ -69,4 +68,29 @@
   font-size: 20px;
   line-height: 1.44;
   margin: 0 auto 26px;
+}
+
+.review-card {
+  border: 1px solid #e5e5dd;
+  border-radius: 8px;
+}
+
+.select-field {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  color: $dark-1;
+  border: 1px solid $gray-1;
+  display: block;
+  padding: 10px 16px;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+  margin-bottom: 16px;
+  height: 48px;
+  font-size: 16px;
+
+  &:focus {
+    border-color: $blue-2;
+  }
 }

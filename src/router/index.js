@@ -168,6 +168,16 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "PostDetails" */ "../views/PostDetails.vue"),
   },
+  {
+    path: "/reviews",
+    name: "ReviewsView",
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
+    component: () =>
+      import(/* webpackChunkName: "ReviewsView" */ "../views/ReviewsView.vue"),
+  },
 ];
 
 const router = new VueRouter({
