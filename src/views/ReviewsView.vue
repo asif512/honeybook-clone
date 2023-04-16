@@ -1209,7 +1209,7 @@ export default {
 
         &.newest {
           .title {
-            margin-top: 40px;
+            margin-top: 90px;
           }
           .btn {
             &.previous {
