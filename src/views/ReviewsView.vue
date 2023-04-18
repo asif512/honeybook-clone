@@ -466,67 +466,6 @@ export default {
             },
           ],
         },
-        {
-          id: 4,
-          categoryName: "doller store",
-          storeName: "fetch",
-          logo: "https://consumersiteimages.trustpilot.net/business-units/5ec39918e9cae40001f09fb8-198x149-1x.jpg",
-          rating:
-            "https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-4.5.svg",
-          trustScore: "4.3",
-          totalReviews: 98,
-          contact: {
-            email: "fetch@info.com",
-            domain: "SimplyBestCoupons.com",
-            location: "united state",
-          },
-          serviesType: "Non-Bank Financial Service",
-          coupon: "coupon services",
-          badge: "most relevant",
-          isCollpased: false,
-          reviews: [
-            {
-              date: "april 8, 2023",
-              logo: "https://user-images.trustpilot.com/6434bbea5d1c3800149e2530/73x73.png",
-              review:
-                "https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-5.svg",
-              description:
-                "It's easy they apply coupon codes to your order at checkout, it doesn't get easier!",
-            },
-            {
-              date: "april 8, 2023",
-              logo: "https://user-images.trustpilot.com/6434bbea5d1c3800149e2530/73x73.png",
-              review:
-                "https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-5.svg",
-              description:
-                "It's easy they apply coupon codes to your order at checkout, it doesn't get easier!",
-            },
-            {
-              date: "april 8, 2023",
-              logo: "https://user-images.trustpilot.com/6434bbea5d1c3800149e2530/73x73.png",
-              review:
-                "https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-5.svg",
-              description:
-                "It's easy they apply coupon codes to your order at checkout, it doesn't get easier!",
-            },
-            {
-              date: "april 8, 2023",
-              logo: "https://user-images.trustpilot.com/6434bbea5d1c3800149e2530/73x73.png",
-              review:
-                "https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-5.svg",
-              description:
-                "It's easy they apply coupon codes to your order at checkout, it doesn't get easier!",
-            },
-            {
-              date: "april 8, 2023",
-              logo: "https://user-images.trustpilot.com/6434bbea5d1c3800149e2530/73x73.png",
-              review:
-                "https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-5.svg",
-              description:
-                "It's easy they apply coupon codes to your order at checkout, it doesn't get easier!",
-            },
-          ],
-        },
       ],
       recentReview: [
         {
@@ -864,7 +803,7 @@ export default {
 
     .related-category-card {
       margin-top: 16px;
-      padding: 32px 24px;
+      padding: 22px 24px;
 
       .title {
         font-size: 16px;
@@ -935,7 +874,7 @@ export default {
 
     .alert-wrapper {
       background: $blue-3;
-      margin-top: 20px;
+      margin-top: 26px;
       color: $dark-1;
       .icon {
         margin-right: 12px;
@@ -944,11 +883,11 @@ export default {
     }
 
     .stores-wrapper {
-      margin-top: 16px;
+      margin-top: 24px;
       position: relative;
 
       .store {
-        margin-bottom: 16px;
+        margin-bottom: 24px;
         .store-information {
           padding: 16px 16px 24px;
 

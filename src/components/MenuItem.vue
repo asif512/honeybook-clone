@@ -16,7 +16,10 @@
           :to="`${subMenu.to}`"
         >
           <b-icon class="hero-menu__item__icon" icon="dash-square" />
-          <span class="hero-menu__item__label">{{ subMenu.label }}</span>
+          <div class="hero-menu-item-wrapper">
+            <span class="hero-menu__item__label">{{ subMenu.label }}</span>
+            <span class="hero-menu__item__slogen">{{ subMenu.slogen }}</span>
+          </div>
         </router-link>
       </div>
     </div>
@@ -62,14 +65,14 @@ export default {
     display: flex;
     align-items: center;
 
-    .menu-name {
-      margin: 0 4px;
-      &.apps {
-        border: 1px solid $light-7;
-        padding: 8px 23px;
-        border-radius: 30px;
-      }
-    }
+    // .menu-name {
+    // margin: 0 4px;
+    // &.apps {
+    //   border: 1px solid $light-7;
+    //   padding: 8px 23px;
+    //   border-radius: 30px;
+    // }
+    // }
 
     .menu-icon {
       margin-left: 8px;
@@ -99,7 +102,6 @@ export default {
         .hero-menu__item {
           width: 50%;
           display: flex;
-          align-items: center;
           border-radius: 4px;
           padding: 0.8rem;
 
@@ -107,10 +109,24 @@ export default {
             background: #eef2f4;
           }
 
-          .hero-menu__item__label {
-            margin-left: 6px;
-            font-size: 14px;
-            font-weight: 500;
+          .hero-menu-item-wrapper {
+            margin-left: 12px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin-top: -7px;
+
+            .hero-menu__item__label {
+              font-size: 14px;
+              font-weight: 600;
+            }
+            .hero-menu__item__slogen {
+              font-size: 14px;
+              font-weight: 400;
+              color: $gray-1;
+              line-height: 1.2;
+              margin-top: 5px;
+            }
           }
         }
 

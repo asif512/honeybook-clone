@@ -13,7 +13,7 @@
       <b-dropdown
         id="dropdown-right"
         right
-        text="Features"
+        text="Apps"
         variant="outline-primary"
         class="m-2"
       >
@@ -68,51 +68,64 @@ export default {
           isCollape: true,
           label: "company",
           isSubMenus: true,
-          width: 400,
+          width: 520,
           subMenus: [
             {
               label: "about us",
               to: "about-us",
               isSubMenus: false,
+              slogen: "Everything you need to run your business in one place.",
             },
             {
               label: "careers",
               to: "careers",
               isSubMenus: false,
+              slogen: "Everything you need to run your business in one place.",
             },
             {
               label: "contact us",
               to: "contact-us",
               isSubMenus: false,
+              slogen: "Everything you need to run your business in one place.",
             },
           ],
         },
         {
           id: 2,
           isCollape: false,
-          label: "apps",
+          label: "features",
           isSubMenus: true,
-          width: 400,
+          width: 520,
           subMenus: [
             {
               label: "app display page",
+              slogen: "Everything you need to run your business in one place.",
               to: "app-display-page",
               isSubMenus: false,
             },
             {
               label: "roadmap",
               to: "roadmap",
+              slogen: "Powerful features built for small businesses.",
               isSubMenus: false,
             },
             {
               label: "changelog",
               to: "changelog",
+              slogen: "Powerful features built for small businesses.",
               isSubMenus: false,
             },
             {
               label: "reviews",
               to: "reviews",
               isSubMenus: false,
+              slogen: "Everything you need to run your business in one place.",
+            },
+            {
+              label: "features",
+              to: "features",
+              isSubMenus: false,
+              slogen: "Everything you need to run your business in one place.",
             },
           ],
         },
@@ -128,37 +141,43 @@ export default {
           isCollape: false,
           label: "resources",
           isSubMenus: true,
-          width: 400,
+          width: 520,
           subMenus: [
             {
               label: "blog",
               to: "blog",
               isSubMenus: false,
+              slogen: "Everything you need to run your business in one place.",
             },
             {
               label: "community",
               to: "community",
               isSubMenus: false,
+              slogen: "Find experts to help grow your business.",
             },
             {
               label: "help center",
               to: "help-center",
               isSubMenus: false,
+              slogen: "Everything you need to run your business in one place.",
             },
             {
               label: "knowledgebase",
               to: "knowledgebase",
               isSubMenus: false,
+              slogen: "Find experts to help grow your business.",
             },
             {
               label: "referrals",
               to: "referrals",
               isSubMenus: false,
+              slogen: "Everything you need to run your business in one place.",
             },
             {
               label: "developers",
               to: "developers",
               isSubMenus: false,
+              slogen: "Find experts to help grow your business.",
             },
           ],
         },
@@ -243,10 +262,12 @@ export default {
 
     #dropdown-right {
       #dropdown-right__BV_toggle_ {
-        border: 1px solid $light-7;
+        // border: 1px solid $light-7;
+        border: none;
         padding: 8px 23px;
         border-radius: 30px;
         color: $dark-1;
+        font-weight: 600;
 
         &:focus-visible {
           box-shadow: none;

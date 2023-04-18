@@ -221,17 +221,24 @@ export default {
 .yearly-plans {
   .pricing-card-wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     margin-bottom: 100px;
+    overflow-x: auto;
+    scrollbar-width: none;
 
     .monthly-price-card {
       width: 350px;
+      min-width: 350px;
+      max-width: 350px;
 
       @include forMedium() {
         width: 100%;
       }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 

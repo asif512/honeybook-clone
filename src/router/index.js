@@ -178,6 +178,16 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "ReviewsView" */ "../views/ReviewsView.vue"),
   },
+  {
+    path: "/features",
+    name: "FeaturesView",
+    meta: {
+      isHideHeader: false,
+      isHideFooter: false,
+    },
+    component: () =>
+      import(/* webpackChunkName: "features" */ "../views/FeaturesView.vue"),
+  },
 ];
 
 const router = new VueRouter({
