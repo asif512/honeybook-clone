@@ -80,8 +80,8 @@ const routes = [
     path: "/help-center",
     name: "HelpCenterView",
     meta: {
-      isHideHeader: true,
-      isHideFooter: true,
+      isHideHeader: false,
+      isHideFooter: false,
     },
     component: () =>
       import(
