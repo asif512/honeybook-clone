@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <router-link class="logo" to="/">honeybook clone ...</router-link>
+    <router-link class="logo" to="/">honeybook clone </router-link>
     <div class="desktop" style="display: flex; align-items: center">
       <div class="munu-items">
         <menu-item
